@@ -1,0 +1,75 @@
+{
+  "name": "rovereto/yandex-metrika",
+  "description": "API Яндекс.Метрики",
+  "type": "library",
+  "keywords": [
+    "laravel",
+    "yandex",
+    "metrika",
+    "yandex metrika api",
+    "logs api",
+    "api отчётов",
+    "php",
+    "яндекс",
+    "метрика"
+  ],
+  "license": "MIT",
+  "support": {
+    "email": "alexander@ilyutkin.ru",
+    "issues": "https://github.com/ilyutkin/yandex-metrika/issues",
+    "source": "https://github.com/ilyutkin/yandex-metrika",
+    "docs": "https://github.com/ilyutkin/yandex-metrika/blob/master/README.md"
+  },
+  "authors": [
+    {
+      "name": "Alexander Ilyutkin",
+      "email": "alexander@ilyutkin.ru",
+      "homepage": "http://ilyutkin.ru",
+      "role": "Developer"
+    },
+    {
+      "name": "Volga",
+      "email": "vtikunov@yandex.ru"
+    },
+    {
+      "name": "Alex Manekin",
+      "email": "alexusmai@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.2 || ^8.0",
+    "illuminate/support": "^5.0|^6.0|^7.0|^8.0|^9.0",
+    "jms/serializer": "^1.8|^2.0|^3.0",
+    "guzzlehttp/guzzle": "^6.0|^7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Rovereto\\YandexMetrika\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Rovereto\\YandexMetrika\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit"
+  },
+  "config": {
+    "sort-packages": true,
+    "preferred-install": "dist",
+    "optimize-autoloader": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Rovereto\\YandexMetrika\\Providers\\YandexMetrikaProvider"
+      ],
+      "aliases": {
+        "YandexMetrikaApi": "Rovereto\\YandexMetrika\\Support\\Facades\\YandexMetrikaApi"
+      }
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
